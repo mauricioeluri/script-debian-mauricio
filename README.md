@@ -1,17 +1,17 @@
 # script-debian-mauricio
-Script para formatação do meu computador.
+Script para formatação do meu computador.  
 Este repositório é pessoal, mas pode servir como guia para qualquer um que queira scriptar a formatação e configuração do seu Debian, principalmente se o seu Ambiente de Desktop for o KDE :)
 
 ### Como funciona:
 
 ## ./configurar-kde
 
-1 - Executa o arquivo repositoriosMauricio
-2 - Insere usuário atual no sudo
-3 - Muda o editor padrão do sudoedit para o VIM
-4 - Instala e configura o bash-completion do Debian
-5 - Ajusta o tempo do grub para 0
-6 - Adiciona o repositório de backports do Debian
+1 - Executa o arquivo repositoriosMauricio  
+2 - Insere usuário atual no sudo  
+3 - Muda o editor padrão do sudoedit para o VIM  
+4 - Instala e configura o bash-completion do Debian  
+5 - Ajusta o tempo do grub para 0  
+6 - Adiciona o repositório de backports do Debian  
 
 ## ./repositorios-mauricio:
 
