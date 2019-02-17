@@ -24,12 +24,12 @@ net-tools \
 nsnake \
 openssh-client \
 transmission \
+virtualbox-5.2 \
 vlc -y
 
 echo "Instalando apps backports"
 sudo apt-get -t stretch-backports install \
 libreoffice \
-virtualbox \
 -y
 
 echo "Instalando apps custom sources"

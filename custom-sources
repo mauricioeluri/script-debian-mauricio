@@ -32,11 +32,11 @@ echo 'deb http://mega.co.nz/linux/MEGAsync/Debian_9.0/ ./' | sudo tee /etc/apt/s
 
 #VIRTUALBOX
 echo "Virtualbox key"
-wget -q -O - http://download.virtualbox.org/virtualbox/debian/oracle_vbox_2016.asc | sudo apt-key add -
+wget -q -O - https://www.virtualbox.org/download/oracle_vbox_2016.asc | sudo apt-key add -
 
 echo "Virtualbox source"
-sudo sh -c 'echo "deb [arch=amd64] https://download.virtualbox.org/virtualbox/debian cosmic non-free contrib" >> /etc/apt/sources.list.d/virtualbox.org.list' 
-
+sudo sh -c 'echo "deb https://download.virtualbox.org/virtualbox/debian stretch contrib" >> /etc/apt/sources.list.d/virtualbox.org.list' 
+ 
 sudo apt-get update
 
 
