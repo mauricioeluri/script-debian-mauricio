@@ -1,0 +1,42 @@
+#!/bin/bash
+
+echo "REQUER O CUSTOM SOURCES INSTALADO!!!"
+
+#apt-transport-https - app para baixar sources por https
+
+sudo apt-get install \
+apt-transport-https \
+alarm-clock-applet \
+cheese \
+clementine \
+cmatrix \
+curl \
+filezilla \
+gimp \
+git \
+git-ftp \
+gnome-disk-utility \
+hplip \
+keepassx \
+k3b \
+lifeograph \
+net-tools \
+nsnake \
+openssh-client \
+transmission \
+vlc -y
+
+echo "Instalando apps backports"
+sudo apt-get -t stretch-backports install \
+libreoffice \
+virtualbox \
+-y
+
+echo "Instalando apps custom sources"
+sudo apt-get install \
+megasync dolphin-megasync \
+google-chrome-stable \
+-y
+
+echo "Wine"
+sudo apt install --install-recommends winehq-stable -y

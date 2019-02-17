@@ -1,0 +1,35 @@
+#!/bin/bash
+
+#VIM - CONFIGURADO
+echo "Clonando repositório VIM"
+git clone git@github.com:mauricioeluri/vimrc.git
+
+echo "Entrando no diretório da instalação"
+cd vimrc/
+
+echo "Tornando script de instalação executável"
+sudo chmod +x install.sh
+
+echo "Rodando script de instalação vimrc"
+#./install.sh
+
+echo "Deletando pasta do clone"
+cd ../
+rm -rf vimrc/
+
+#MEUS COMANDOS CUSTOMIZADOS DO TERMINAL
+echo "Clonando repositório custom_commands"
+git clone git@github.com:mauricioeluri/custom_commands.git
+
+echo "Entrando no diretório da instalação"
+cd custom_commands/
+
+echo "Tornando script de instalação executável"
+sudo chmod +x start.sh
+
+echo "Rodando script de instalação custom_commands"
+./start.sh
+
+echo "Deletando pasta do clone"
+cd ../
+rm -rf custom_commands/

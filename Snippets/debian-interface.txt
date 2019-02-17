@@ -1,0 +1,5 @@
+#tema que eu gosto de utilizar no kde
+
+Application Style - GNOME application style - GTK2 E GTK3 theme:
+
+T4G-Theme

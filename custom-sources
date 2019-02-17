@@ -1,0 +1,48 @@
+#!/bin/bash
+
+#APPS GOOGLE
+echo "Google key"
+wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+
+echo "Google chrome source"
+echo 'deb [arch=amd64] https://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
+
+echo "Google Music Manager source"
+echo 'deb [arch=amd64] https://dl.google.com/linux/musicmanager/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-musicmanager.list
+
+
+#WINE
+echo "Adicionando arquitetura i386 - wine"
+sudo dpkg --add-architecture i386
+
+echo "Wine key"
+wget -q -O - https://dl.winehq.org/wine-builds/winehq.key | sudo apt-key add -
+
+echo "Wine source"
+echo 'deb https://dl.winehq.org/wine-builds/debian/ stretch main' | sudo tee /etc/apt/sources.list.d/wine.list
+
+
+#MEGASYNC
+echo "MEGASYNC key"
+wget -q -O - https://mega.co.nz/linux/MEGAsync/Debian_9.0/Release.key | sudo apt-key add -
+
+echo "MEGASYNC source"
+echo 'deb http://mega.co.nz/linux/MEGAsync/Debian_9.0/ ./' | sudo tee /etc/apt/sources.list.d/megasync.list
+
+
+#VIRTUALBOX
+echo "Virtualbox key"
+wget -q -O - http://download.virtualbox.org/virtualbox/debian/oracle_vbox_2016.asc | sudo apt-key add -
+
+echo "Virtualbox source"
+sudo sh -c 'echo "deb [arch=amd64] https://download.virtualbox.org/virtualbox/debian cosmic non-free contrib" >> /etc/apt/sources.list.d/virtualbox.org.list' 
+
+sudo apt-get update
+
+
+#DOCKER
+echo "Docker key"
+curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
+
+echo "Docker source"
+echo "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable" | sudo tee -a /etc/apt/sources.list.d/docker.list

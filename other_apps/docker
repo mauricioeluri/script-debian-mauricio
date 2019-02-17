@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo "Instalando dependências do docker"
+sudo apt-get install apt-transport-https ca-certificates curl gnupg2 software-properties-common -y
+sudo apt-cache policy docker-ce
+
+echo "Instalando docker"
+sudo apt-get -y install docker-ce docker-compose
+echo "Rodando container hello world"
+docker run hello-world

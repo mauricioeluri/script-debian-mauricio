@@ -1,0 +1,14 @@
+#!/bin/bash
+
+echo "WOEUSB"
+git clone git@github.com:slacka/WoeUSB.git
+sudo apt-get install devscripts equivs gdebi-core -y
+cd WoeUSB/
+./setup-development-environment.bash
+mk-build-deps
+sudo gdebi woeusb*
+dpkg-buildpackage -uc -b
+sudo gdebi ../woeusb*.deb 
+cd ../
+rm -rf Woe* woe* && rm Woe* woe*
+

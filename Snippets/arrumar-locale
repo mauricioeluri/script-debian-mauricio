@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Ver locale
+locale
+
+# Definindo locale pt_BR
+sudo locale-gen "pt_BR.UTF-8"
+
+# Outra configuração para locale pt_BR
+sudo dpkg-reconfigure locales

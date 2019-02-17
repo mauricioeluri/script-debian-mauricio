@@ -1,0 +1,9 @@
+#!/bin/bash
+
+sudo apt-get install snapd
+
+sudo apt-get install gnome-themes-standard
+
+sudo snap install phpstorm --classic
+
+

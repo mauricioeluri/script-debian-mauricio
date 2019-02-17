@@ -1,0 +1,28 @@
+#!/bin/bash
+
+echo "Deletando clipboard do KDE"
+sudo rm -rf /usr/share/plasma/plasmoids/org.kde.plasma.clipboard
+
+echo "Deletando KAccessible"
+sudo apt-get remove kaccessible 
+
+echo "Deletando kcalc"
+sudo apt-get purge kcalc
+
+echo "Instalando speedcrunch"
+sudo apt-get install speedcrunch
+
+echo "Setando k3b, dolphin, kwrite, konsole como manual"
+sudo apt-get install k3b dolphin kwrite konsole
+
+echo "Deletando Dragon e Juk"
+sudo apt-get purge dragonplayer juk -y
+
+echo "Instalando vlc e clementine"
+sudo apt-get install vlc clementine -y
+
+echo "Deletando Thai x terminal"
+sudo apt-get purge xiterm+thai -y
+
+echo "Dando um autoremove nos pacotes não mais necessários"
+sudo apt-get autoremove -y
