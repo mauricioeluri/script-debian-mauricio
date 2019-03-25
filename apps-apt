@@ -11,11 +11,11 @@ cheese \
 clementine \
 cmatrix \
 curl \
+digikam \
 filezilla \
 gimp \
 git \
 git-ftp \
-gnome-disk-utility \
 hplip \
 keepassx \
 k3b \
@@ -23,6 +23,7 @@ lifeograph \
 net-tools \
 nsnake \
 openssh-client \
+partitionmanager \
 transmission \
 virtualbox-5.2 \
 vlc -y
