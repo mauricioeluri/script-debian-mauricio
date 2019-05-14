@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Clonando repositório do instalador lamp"
-git clone git@github.com:mauricioeluri/lamp.git ~/Programas/lamp
+git clone git@github.com:mauricioeluri/lamp.git $HOME/Programas/lamp
 
 echo "Tornando arquivos executáveis"
-sudo chmod +x ~/Programas/lamp/*.sh
+sudo chmod +x $HOME/Programas/lamp/*.sh

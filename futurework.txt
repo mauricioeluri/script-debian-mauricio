@@ -6,4 +6,9 @@ Dar um jeito de importar um PPA da Exodus.
 novo arquivo stretch backports separado, e agora também contém o contrib
 inserir o torbrowser
 
-clonar programinhas para redes wireless 
+clonar tools do kali
+
+separar o script do docker & lamp
+
+aumentar a qualidade dos scripts, utilizando variáveis e parâmetros, e tentar inserir automaticamente as mudanças manuais em arquivos, para aumentar a automação
+
