@@ -1,0 +1,89 @@
+#!/bin/bash
+
+#apt-transport-https - app para baixar sources por https
+echo "Instalando dependencias"
+sudo apt-get install apt-transport-https wget -y
+
+echo "Instalando custom sources"
+sudo ./sub/custom-sources
+
+LATESTVIRTUALBOX=$(sudo apt search virtualbox- 2> /dev/null | grep virtualbox- | grep amd64 | sed '$!d' | sed 's:/[^/]*$::')
+APT_INSTALL="sudo apt-get -y install cmatrix clementine gimp git net-tools"
+CALC=""
+LIBREOFFICE=""
+WINE=""
+
+function instalar() {
+    while true; do
+        read -r -p "Instalar $1? [s/n]" yn
+        case $yn in
+            [YySs]* ) APT_INSTALL+=" ${1} "; break;;
+            [Nn]* ) break;;
+            * ) echo "Por favor, responda Sim [s] ou Não [n].";;
+        esac
+    done
+}
+
+#INSTALAÇÃO DOS APPS SIMPLES - NÃO REQUEREM CONFIGURAÇÕES NO SISTEMA
+instalar "alarm-clock-applet"
+instalar "cheese"
+instalar "digikam"
+instalar "filezilla"
+instalar "git-ftp"
+instalar "hplip"
+instalar "keepassx"
+instalar "k3b"
+instalar "lifeograph"
+instalar "nsnake"
+instalar "openssh-client"
+instalar "partitionmanager" 
+instalar "playonlinux" 
+instalar "transmission"
+instalar "$LATESTVIRTUALBOX"
+
+#APPS-BACKPORTS
+instalar "megasync" 
+instalar "dolphin-megasync"
+instalar "google-chrome-stable"
+
+
+#INSTALAÇÃO DOS APPS MAIS COMPLEXOS - CADA UM EXIGE MAIS CONFIGURAÇÕES 
+
+while true; do
+    read -r -p "Instalar speedcrunch no lugar da calculadora padrao? [s/n]" yn
+    case $yn in
+        [YySs]* ) CALC="sudo apt-get purge kcalc -y && sudo apt-get install speedcrunch -y"; break;;
+        [Nn]* ) break;;
+        * ) echo "Por favor, responda Sim [s] ou Não [n].";;
+    esac
+done
+
+while true; do
+    read -r -p "Instalar o wine? [s/n]" yn
+    case $yn in
+        [YySs]* ) WINE="sudo apt-get install --install-recommends winehq-stable -y"; break;;
+        [Nn]* ) break;;
+        * ) echo "Por favor, responda Sim [s] ou Não [n].";;
+    esac
+done
+
+while true; do
+    read -r -p "Instalar a versão instável do LibreOffice? [s/n]" yn
+    case $yn in
+        [YySs]* ) LIBREOFFICE="sudo apt-get -t buster-backports install libreoffice -y"; break;;
+        [Nn]* ) break;;
+        * ) echo "Por favor, responda Sim [s] ou Não [n].";;
+    esac
+done
+
+echo "Executando [se selecionado] instalação do wine"
+eval $WINE
+echo "Executando [se selecionado] instalação da calculadora"
+eval $CALC
+echo "Executando [se selecionado] instalação do libreoffice"
+eval $LIBREOFFICE
+echo "Executando [se selecionado] instalação dos demais aplicativos"
+eval $APT_INSTALL
+
+
+sudo ./sub/limpar-kde

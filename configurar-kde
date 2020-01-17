@@ -1,18 +1,13 @@
 #!/bin/bash
 
-# 1 - EXTRA - MAURÍCIO
-sudo chmod +x repositoriosMauricio
-./repositoriosMauricio
+#  MAURÍCIO
+sudo ./sub/repositorios-mauricio
 
+exit
 
 # 2 - USER NO SUDO
-echo -e "\e[91mInsira o nome do seu usuário no documento aberto, igual a linha destacada:
-# User privilege specification
-root	ALL=(ALL:ALL) ALL
-\e[41m\e[97mUSUARIO	ALL=(ALL:ALL) ALL\e[0m
-
-"
-read -n1 -p "Enter para continuar"
+sudo usermod -a -G sudo $USER
+sudo gpasswd -a $USER sudo
 
 
 export VISUAL="visudo"
@@ -29,12 +24,11 @@ sudo update-alternatives --config editor
 # 4 - BASH-COMPLETION
 echo "Instalando bash-completion"
 sudo apt-get install bash-completion
-echo -e "\e[34m\e[1mInsira este código no final do arquivo
-if [ -f /etc/bash_completion ]; then
+#echo -e "\e[34m\e[1mInsira este código no final do arquivo
+echo "if [ -f /etc/bash_completion ]; then     
  . /etc/bash_completion
-fi
-\e[0m"
-sudoedit /etc/profile
+fi" >> /etc/profile
+#sudoedit /etc/profile
 
 
 # 5 - GRUB TIME TO 0
@@ -49,10 +43,4 @@ sudo update-grub
 
 
 # 6 - ADICIONANDO BACKPORTS
-echo 'deb http://deb.debian.org/debian stretch-backports main' | sudo tee /etc/apt/sources.list.d/backports.list
-
-
-###### EXTRA ######
-
-echo "Creating a Projects folder"
-mkdir ~/Projects
+echo "deb http://deb.debian.org/debian $(lsb_release -cs)-backports main" | sudo tee /etc/apt/sources.list.d/backports.list

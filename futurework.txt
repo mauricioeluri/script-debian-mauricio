@@ -10,6 +10,4 @@ clonar tools do kali
 
 separar o script do docker & lamp
 
-aumentar a qualidade dos scripts, utilizando variáveis e parâmetros, e tentar inserir automaticamente as mudanças manuais em arquivos, para aumentar a automação
-
 criar os diretórios necessários, incluindo o diretório para o lamp -> $HOME/Projects/lamp/

@@ -1,48 +1,5 @@
-[KDE Keyboard Layout Switcher][Global Shortcuts]
-Decrease Keyboard Brightness=Keyboard Brightness Down
-Decrease Screen Brightness=Monitor Brightness Down
-Disable Touchpad=Touchpad Off
-Enable Touchpad=Touchpad On
-Hibernate=Hibernate
-Increase Keyboard Brightness=Keyboard Brightness Up
-Increase Screen Brightness=Monitor Brightness Up
-PowerOff=Power Off
-Show System Activity=Ctrl+Esc
-Sleep=Sleep
-Switch to Next Keyboard Layout=Ctrl+Alt+K
-Toggle Keyboard Backlight=Keyboard Light On/Off
-Toggle Touchpad=Touchpad Toggle
-display=Display; Meta+P
-{143fd58b-df13-45d2-9334-6d9a1aea3789}=Print
-{61cd673b-6776-424e-9bba-1fdf34757dca}=Shift+Print
-{98aeac83-9338-4d01-8642-6d18fae08aaf}=Meta+Print
-{b3c538c0-9b83-46c3-9eed-6344db6d62ab}=Meta+Shift+Print
-{d03619b6-9b3c-48cc-9d9c-a2aadb485550}=Search
-
 [firefox-esr.desktop][Global Shortcuts]
 _launch=Alt+X
-
-[kaccess][Global Shortcuts]
-Toggle Screen Reader On and Off=Meta+Alt+S
-
-[kmix][Global Shortcuts]
-decrease_microphone_volume=Microphone Volume Down
-decrease_volume=Volume Down
-increase_microphone_volume=Microphone Volume Up
-increase_volume=Volume Up
-mic_mute=Microphone Mute
-mute=Volume Mute
-
-[krunner][Global Shortcuts]
-run command=Alt+Space; Alt+F2;\s
-run command on clipboard contents=Alt+Shift+F2
-
-[ksmserver][Global Shortcuts]
-Halt Without Confirmation=Ctrl+Alt+Shift+PgDown
-Lock Session=Ctrl+Alt+L; Screensaver
-Log Out=Ctrl+Alt+Del
-Log Out Without Confirmation=Ctrl+Alt+Shift+Del
-Reboot Without Confirmation=Ctrl+Alt+Shift+PgUp
 
 [kwin][Global Shortcuts]
 Activate Window Demanding Attention=Ctrl+Alt+A
@@ -191,31 +148,10 @@ view_actual_size=Meta+0
 view_zoom_in=Meta+=
 view_zoom_out=Meta+-
 
-[mediacontrol][Global Shortcuts]
-nextmedia=Media Next
-playpausemedia=Media Play
-previousmedia=Media Previous
-stopmedia=Media Stop
-
 [org.kde.konsole.desktop][Global Shortcuts]
 NewTab=none
 NewWindow=none
 _launch=Ctrl+Alt+T
-
-[plasmashell][Global Shortcuts]
-activate widget 18=none
-clear-history=none
-clipboard_action=none
-cycleNextAction=none
-cyclePrevAction=none
-edit_clipboard=none
-manage activities=Meta+Q
-next activity=Meta+Tab
-previous activity=Meta+Shift+Tab
-repeat_action=Ctrl+Alt+R
-show dashboard=Ctrl+F12
-show-on-mouse-pos=none
-stop current activity=Meta+S
 
 [speedcrunch.desktop][Global Shortcuts]
 _launch=Alt+C

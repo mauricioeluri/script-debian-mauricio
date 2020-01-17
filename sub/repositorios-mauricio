@@ -1,0 +1,14 @@
+#!/bin/bash
+
+#VIM - CONFIGURADO
+echo "Clonando repositório VIM"
+git clone https://github.com/mauricioeluri/vimrc.git
+
+echo "Rodando script de instalação vimrc"
+./vimrc/install.sh
+
+echo "Deletando pasta do clone"
+rm -rf vimrc/
+
+echo "Rodando script de instalação dos comandos extras terminal"
+./../comandos/start.sh
