@@ -5,10 +5,12 @@ echo "Clonando repositório VIM"
 git clone https://github.com/mauricioeluri/vimrc.git
 
 echo "Rodando script de instalação vimrc"
+cd vimrc/
 ./vimrc/install.sh
+pwd
 
 echo "Deletando pasta do clone"
-rm -rf vimrc/
+#rm -rf vimrc/
 
 echo "Rodando script de instalação dos comandos extras terminal"
-./../comandos/start.sh
+#./../comandos/start.sh
