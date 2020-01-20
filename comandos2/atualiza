@@ -1,0 +1,5 @@
+#!/bin/bash
+
+apt-get update -y
+apt-get --force-yes -y upgrade
+apt-get dist-upgrade -y 
