@@ -9,8 +9,8 @@ cd vimrc
 ./install.sh
 cd ../
 
-echo "Deletando pasta do clone"
-rm -rf vimrc/
+#echo "Deletando pasta do clone"
+#rm -rf vimrc/
 
 echo "Rodando script de instalação dos comandos extras terminal"
 cd comandos

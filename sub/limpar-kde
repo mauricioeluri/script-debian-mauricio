@@ -18,5 +18,29 @@ sudo apt-get purge dragonplayer juk -y
 echo "Deletando Thai x terminal"
 sudo apt-get purge xiterm+thai -y
 
+echo "Deletando KMail"
+sudo apt-get purge kmail -y
+
+echo "Deletando KwalletManager"
+sudo apt-get purge kwalletmanager -y
+
+echo "Deletando KAddressBook"
+sudo apt-get purge kaddressbook -y
+
+echo "Deletando kopete"
+sudo apt-get purge kopete -y
+
+echo "Deletando hugin"
+sudo apt-get purge hugin* -y
+
+echo "Deletando korganizer"
+sudo apt-get purge korganizer -y
+
+echo "Deletando akregator"
+sudo apt-get purge akregator -y
+
+echo "Deletando khmerconverter"
+sudo apt-get purge khmerconverter -y
+
 echo "Dando um autoremove nos pacotes não mais necessários"
 sudo apt-get autoremove -y

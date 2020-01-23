@@ -38,7 +38,7 @@ instalar "nsnake"
 instalar "openssh-client"
 instalar "partitionmanager" 
 instalar "playonlinux" 
-instalar "transmission"
+instalar "ktorrent"
 instalar "$LATESTVIRTUALBOX"
 
 #APPS-BACKPORTS

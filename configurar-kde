@@ -1,9 +1,10 @@
 #!/bin/bash
 
+echo -e "\e[91mNão rodar como sudo!!! \e[0m"
+read -n1 -p "Enter para continuar"
+
 #  MAURÍCIO
 sudo ./sub/repositorios-mauricio
-
-exit
 
 # 2 - USER NO SUDO
 sudo usermod -a -G sudo $USER
