@@ -1,9 +1,6 @@
-Criar um script que executa tudo, na ordem correta.
 Ajustar as mensagens do termina, botar uma cor destacada, para um melhor feedback.
 Dar um jeito de importar um PPA da Exodus.
 
-[NOVAS MODIFICAÇÕES NO SISTEMA]
-novo arquivo stretch backports separado, e agora também contém o contrib
 inserir o torbrowser
 
 clonar tools do kali
