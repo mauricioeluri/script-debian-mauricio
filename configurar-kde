@@ -3,8 +3,15 @@
 echo -e "\e[91mNão rodar como sudo!!! \e[0m"
 read -n1 -p "Enter para continuar"
 
-#  MAURÍCIO
-sudo ./sub/repositorios-mauricio
+#VIM - CONFIGURADO
+echo "Rodando script de instalação vimrc"
+cd vimrc
+./install.sh
+cd ../
+
+echo "Rodando script de instalação dos comandos extras terminal"
+cd comandos
+./start.sh
 
 # 2 - USER NO SUDO
 sudo usermod -a -G sudo $USER
